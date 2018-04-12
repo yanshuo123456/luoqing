@@ -1,0 +1,17 @@
+div:nth-of-type(2){
+    display: none;
+}
+div:nth-of-type(4){
+    opacity: 0;
+}
+/*
+display:none，隐藏之后，不占据文档空间
+opacity:0，完全透明，依旧占据文档空间
+*/
+
+
+.red{
+    color: red;
+    font-size: 40px;
+    background-color: blue;
+}

@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: #f3f3f3;
+}
+header{
+    background-color: #39f;
+    color: white;
+    text-align: center;
+    height: 44px;
+    line-height: 44px;
+    font-size: 17px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.page{
+    margin: 44px 0 48px 0;
+}
+footer{
+    background-color: #59d;
+    color: white;
+    text-align: center;
+    height: 48px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer a{
+    text-decoration: none;
+    display: block;
+    width: 33.333%;
+    height: 48px;
+    float: left;
+    color: white;
+}
+footer a span{
+    display: block;
+    font-size: 13px;
+}
+footer a span:nth-child(1){
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    font-size: 22px;
+}
+footer a.selected{
+    color: gold;
+}
+
+.gz-form {
+  padding: 0.5rem;
+}
+.gz-form input[type=number] {
+  border: 1px solid #39f;
+  height: 2.4rem;
+  padding: 0.7rem;
+  width: 100%;
+  border-radius: 0.3rem;
+  margin: 0.25rem 0;
+  outline: none;
+}
+.gz-form input[type=number]:focus {
+  box-shadow: inset 1px 1px 2px gray;
+}
+.gz-form button, .btn {
+  border: 1px solid #198cff;
+  background-color: #198cff;
+  color: white;
+  height: 2.4rem;
+  padding: 0.4rem;
+  width: 100%;
+  border-radius: 0.3rem;
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+.btn{
+  margin: 10px;
+  display: block;
+  width: auto;
+  text-align: center;
+  font-size: 1rem;
+}
+section {
+    background-color: white;
+    margin: 0 0.5rem 4rem 0.5rem;
+    padding: 0.5rem;
+}
+dl {
+  margin: 1rem 0;
+  font-size: 0.8rem;
+  color: #333;
+}
+dt {
+  float: left;
+}
+dd {
+  float: right;
+}
+section > div {
+  clear: both;
+}
+.zhichu {
+  color: red;
+}
+.zhichu > dd:before {
+  content: '-';
+}
+.hr {
+  border-bottom: 1px solid gray;
+  position: relative;
+  top: 0.5rem;
+}
+.result {
+  font-weight: bold;
+}
+/************AngularJs输入状态管理和数据验证**************
+因为AnguluarJs扩展了input等表单元素，为它们增加了输入状态管理
+和数据验证功能。这些功能只需要添加ng-model指令就可以使用！
+当Angular应用程序启动或表单元素的值发生变化时，Angular会立刻
+评估表单元素的值及验证规则为表单元素添加或删除一组样式类。通过
+这些样式类我们可以实现输入状态提醒和表单验证功能。
+这些样式类不仅表单元素上有，form元素上也有，而且form元素上的
+样式类是form内部所有表单元素的综合结果。
+ng-valid: 所有验证规则都已验证通过
+ng-invalid: 验证未通过（任何一个规则没有通过都算）
+ng-valid-[key]: key指定规则已经验证通过
+ng-invalid-[key]: key指定的规则没有验证通过
+ng-pristine: 没有输入过字符或进行选择
+ng-dirty: 输入过字符或者被选择过
+ng-touched: 失去焦点之后才算touched
+ng-untouched: 从来没有被触摸或点击过，或者当前是获得焦点的状态
+ng-pending: 异步验证已开始但未完成状态
+ng-empty: 文本框是空的
+ng-not-empty: 文本框中有字符
+
+*/
+input.ng-dirty.ng-invalid{
+  background-color: red;
+  border-color: yellow;
+  color: white;
+}
+
+ul.list{
+    list-style: none;
+    padding: 0;
+    margin: 54px 10px 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    color: #444;
+}
+.list li{
+    height: 50px;
+    line-height: 30px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: right;
+}
+.list li:last-child{
+    border:none;
+}
+.list input{
+    height: 30px;
+    font-size: 1rem;
+    text-align: right;
+    border: none;
+    outline: none;
+}
+.list span{
+    float: left;
+}
+.list i {
+    font-style: normal;
+    margin-left: 3px;
+}
+.panel {
+    margin: 55px 10px;
+    padding: 1px 10px;
+    background-color: white;
+    color: #555;
+    font-size: 13px;
+}
+.panel h3{
+  font-weight: normal;
+  color: #333;
+}

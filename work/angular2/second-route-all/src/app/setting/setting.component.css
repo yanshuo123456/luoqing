@@ -1,0 +1,9 @@
+main>.p{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 5%;
+}
+main input{
+    width: 40px;
+}

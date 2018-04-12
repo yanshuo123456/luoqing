@@ -1,0 +1,16 @@
+body>div{
+    width: 400px;
+    margin: 100px auto;
+    background-color: yellow;
+}
+div{
+    text-align: center;
+}
+div>input{
+    width: 60px;
+    line-height: 30px;
+    font-size: 25px;
+}
+div>div{
+    font-size: 30px;
+}

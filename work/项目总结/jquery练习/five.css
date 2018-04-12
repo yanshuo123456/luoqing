@@ -1,0 +1,15 @@
+div{
+    width: 400px;
+    height: 500px;
+    /*border: 30px solid black;
+    padding: 50px;*/
+    background-color: red;
+    /*font-size: 30px;
+    margin: 11px;*/
+    /*overflow: scroll;*/
+}
+/*body{
+    margin: 30px;
+    border: 2px solid red;
+}*/
+/*121 = 50 + 30 + 11 + 30 ;  121*/

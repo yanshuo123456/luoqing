@@ -1,0 +1,78 @@
+div{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    margin: 100px auto;
+
+    /*
+    origin:起源
+    设置图形变换的参考点;
+    */
+    transform-origin: 0  0 ;
+
+    /*
+    transition:过渡;
+    设置当哪些属性变化时，产生过渡效果（渐变）;
+    all：所有，全部;
+    并不是所有的属性都可以过渡,display就不可以;
+    */
+    transition: all 2s linear 1s;
+
+    /*拆分写法
+    property：属性；duration：一段时间、持续时间;
+    time:时间；function:函数、功能*/
+    /*设置过渡属性*/
+    /*transition-property: transform,color;*/
+    /*设置过渡时间*/
+    /*transition-duration: 2s;*/
+    /*设置过渡的速度函数
+    http://www.jianshu.com/p/5354a9042a2a
+    该网址下有详细对比、说明*/
+    /*transition-timing-function: ease-in-out;*/
+    /*设置过渡的延迟；
+    delay：延迟*/
+    /*transition-delay: 1s;*/
+}
+/*鼠标悬浮效果*/
+div:hover{
+    /*图形变换
+    transform:转变、改变、变化；
+    scale:缩放；
+    scale(xy);scale(x,y);
+    */
+    /*transform: scale(2,3);*/
+
+    /*
+    rotate:旋转; deg:degree，度;
+    顺时针为正，逆时针为负;
+    */
+    /*transform: rotate(45deg);*/
+
+
+    /*translate:平移；
+    translate(x,y)*/
+    /*transform: translate(100px,200px);*/
+
+    /*skew:倾斜；
+    skew(x,y);*/
+    /*transform: skew(30deg,10deg);*/
+
+    /*上述变换可以自由组合，顺序不限，数量不限*/
+    /*transform: scale(2) rotate(30deg);*/
+
+    /*
+    matrix:矩阵;
+    上述各种变换的本质都是矩阵变换;
+    有兴趣，可以参考ppt或者计算机图形学，线形代数。
+
+    */
+    /*transform: matrix(1,0,0,1,100,200);*/
+
+
+    transform: rotate(45deg);
+    /*font-size: 45px;*/
+
+    color: white;
+    background-color: blueviolet;
+
+}

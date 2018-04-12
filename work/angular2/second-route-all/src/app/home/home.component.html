@@ -1,0 +1,80 @@
+<div class="home">
+  <input (keyup)="isShow=false" [(ngModel)]="Skill.one" type="number">
+  <br>
+  <br>
+  <input (keyup)="isShow=false" [(ngModel)]="Skill.two" type="number">
+  <br>
+  <br>
+  <input (keyup)="isShow=false" [(ngModel)]="Skill.three" type="number">
+  <br>
+  <br>
+  <input (click)="dian()" type="button" value="开始计算">
+</div>
+<br>
+<main *ngIf="isShow">
+  <p class="p">
+    <span>
+      总工资&#x3000;
+    </span>
+    <span>{{Skill.total}}</span>
+  </p>
+  <br>
+  <hr>
+  <p class="p">
+    <span>
+      养老金&#x3000;
+      <input [(ngModel)]='Feilv.yanglaojinfeilv' type="number">%
+    </span>
+    <span>{{Skill.yanglaojin}}</span>
+  </p>
+  <br>
+  <p class="p">
+    <span>
+      医疗金&#x3000;
+      <input [(ngModel)]='Feilv.yiliaojinfeilv' type="number">%
+    </span>
+    <span>{{Skill.yiliaojin}}</span>
+  </p>
+  <br>
+  <p class="p">
+    <span>
+      失业金&#x3000;
+      <input [(ngModel)]='Feilv.shiyejinfeilv' type="number">%
+    </span>
+    <span>{{Skill.shiyejin}}</span>
+  </p>
+  <br>
+  <p class="p">
+    <span>
+      工伤金&#x3000;
+      <input [(ngModel)]='Feilv.gongshangjinfeilv' type="number">%
+    </span>
+    <span>{{Skill.gongshangjin}}</span>
+  </p>
+  <br>
+  <p class="p">
+    <span>
+
+      生育费&#x3000;
+      <input [(ngModel)]='Feilv.shengyufeifeilv' type="number">%
+    </span>
+    <span>{{Skill.shengyufei}}</span>
+  </p>
+  <br>
+  <p class="p">
+    <span>
+      公积金&#x3000;
+      <input [(ngModel)]='Feilv.gongjijinfeilv' type="number">%
+    </span>
+    <span>{{Skill.gongjijin}}</span>
+  </p>
+  <br>
+  <p class="p">
+    <span>
+      社保金&#x3000;
+      <input [(ngModel)]='Feilv.shebaojinfeilv' type="number">%
+    </span>
+    <span>20元</span>
+  </p>
+  <br>
+</main>

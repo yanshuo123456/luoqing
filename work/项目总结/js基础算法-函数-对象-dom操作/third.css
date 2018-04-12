@@ -1,0 +1,7 @@
+.cell{
+    width: 100px;
+    height: 100px;
+    float: left;
+    background-color: red;
+    margin: 0 10px;
+}

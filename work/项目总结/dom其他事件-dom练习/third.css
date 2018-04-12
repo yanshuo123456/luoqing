@@ -1,0 +1,56 @@
+div{
+    width: 665px;
+    height: 362px;
+    background-image: url('images/31.jpg');
+    position: relative;
+}
+div>.fa{
+    font-size: 40px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    /*calculate:计算*/
+    top: calc((100% - 40px)/2);
+}
+div>.fa-angle-left{
+    left: 20px;
+}
+div>.fa-angle-right{
+    right: 20px;
+}
+div>.title{
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    margin: 0;
+    font-size: 25px;
+    color: white;
+}
+div>.page{
+    position: absolute;
+    right: 20px;
+    bottom:15px;
+    margin: 0;
+}
+div>.page>span{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 5px;
+    background-color: white;
+}
+div>.fa:hover{
+    background-color: white;
+    border-radius: 50%;
+    color: red;
+    transform: scale(1.5);
+}
+
+div>.page>span:nth-of-type(1){
+    background-color: skyblue;
+    transform: scale(1.5);
+}

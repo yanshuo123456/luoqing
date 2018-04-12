@@ -1,0 +1,101 @@
+<p class="kk">
+  {{title}}</p>
+<div class="div">
+  <input (change)="inputChange()" [(ngModel)]='count.jiben' type="number" placeholder="请输入基本工资">
+  <br>
+  <br>
+  <input (change)="inputChange()" [(ngModel)]='count.jixiao' type="number" placeholder="请输入绩效">
+  <br>
+  <br>
+  <input (change)="inputChange()" [(ngModel)]='count.jiangjin' type="number" placeholder="请输入奖金">
+  <br>
+  <br>
+  <input (click)='dian()' class="ons" type="button" value="开始计算">
+  <br>
+  <br>
+</div>
+
+<div class="section" *ngIf="isShow">
+  <div class="sees">
+    <span>工资总额</span>
+    <span>{{count.all}}</span>
+  </div>
+  <hr>
+  <p>
+    <span>养老金 &nbsp;&nbsp;
+      <input [(ngModel)]='feilv.yanglaofeilv' type="number">&nbsp;&nbsp;%
+    </span>
+    <span>
+      {{count.yanglao}}
+    </span>
+  </p>
+  <p>
+    <span>
+      医疗金 &nbsp;&nbsp;
+      <input [(ngModel)]='feilv.yiliaofeilv' type="number">&nbsp;&nbsp;%
+    </span>
+    <span>
+      {{count.yiliao}}
+    </span>
+  </p>
+  <p>
+    <span>
+      失业金 &nbsp;&nbsp;
+      <input [(ngModel)]='feilv.shiyefeilv' type="number">&nbsp;&nbsp;%
+    </span>
+    <span>
+      {{count.shiye}}
+    </span>
+  </p>
+  <p>
+    <span>
+      工伤金 &nbsp;&nbsp;
+      <input [(ngModel)]='feilv.gongshangfeilv' type="number">&nbsp;&nbsp;%
+    </span>
+    <span>
+      {{count.gongshang}}
+    </span>
+  </p>
+  <p>
+    <span>
+      生育金 &nbsp;&nbsp;
+      <input [(ngModel)]='feilv.shengyufeilv' type="number">&nbsp;&nbsp;%
+    </span>
+    <span>
+      {{count.shengyu}}
+    </span>
+  </p>
+  <p>
+    <span>
+      公积金 &nbsp;&nbsp;
+      <input [(ngModel)]='feilv.gongjijinfeilv' type="number">&nbsp;&nbsp;%
+    </span>
+    <span>
+      {{count.gongjijin}}
+    </span>
+  </p>
+  <p>
+    <span>
+      社保金 &nbsp;&nbsp;
+      <input [(ngModel)]='feilv.shebaofeilv' type="number">&nbsp;&nbsp;%
+    </span>
+    <span>
+      {{count.shebaojin}}
+    </span>
+  </p>
+  <hr>
+  <div class="only">
+    <p>
+      <span>计税工资</span>
+      <span> {{count.jishui}}</span>
+    </p>
+    <p>
+      <span>个人所得税</span>
+      <span>{{count.grsds}}</span>
+    </p>
+    <p>
+      <span>实发工资</span>
+      <span>{{count.sfgz}}</span>
+    </p>
+  </div>
+</div>

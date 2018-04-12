@@ -1,0 +1,65 @@
+<div class="page">
+    <form #calcForm="ngForm" class="gz-form">
+        <input type="number" [(ngModel)]="jiBen" name="jiBen" (keyup)="showResult=false" required autocomplete="off" placeholder="请输入基本工资/不能低于最低基本工资">
+        <input type="number" [(ngModel)]="jiXiao" name="jiXiao" (keyup)="showResult=false" required autocomplete="off" placeholder="请输入绩效工资">
+        <input type="number" [(ngModel)]="jiangJin" name="jiangJin" (keyup)="showResult=false" required autocomplete="off" placeholder="请输入奖金">
+        <button (click)="calc();" [disabled]="calcForm.invalid">开始计算</button>
+    </form>
+    <section *ngIf="showResult">
+        <dl>
+            <dt>工资总额</dt>
+            <dd>￥{{result.total}}</dd>
+        </dl>
+        <div class="hr"></div>
+        <dl class="zhichu">
+            <dt>养老{{settings.yangLao}}</dt>
+            <dd>{{result.sheBao.yangLao}}</dd>
+        </dl>
+        <div></div>
+        <dl class="zhichu">
+            <dt>医疗{{settings.yiLiao}}</dt>
+            <dd>{{result.sheBao.yiLiao}}</dd>
+        </dl>
+        <div></div>
+        <dl class="zhichu">
+            <dt>失业{{settings.shiYe}}</dt>
+            <dd>{{result.sheBao.shiYe}}</dd>
+        </dl>
+        <div></div>
+        <dl class="zhichu">
+            <dt>工伤{{settings.gongShang}}</dt>
+            <dd>{{result.sheBao.gongShang}}</dd>
+        </dl>
+        <div></div>
+        <dl class="zhichu">
+            <dt>生育{{settings.shengYu}}</dt>
+            <dd>{{result.sheBao.shengYu}}</dd>
+        </dl>
+        <div></div>
+        <dl class="zhichu">
+            <dt>公积金{{settings.gongJiJin}}</dt>
+            <dd>{{result.sheBao.gongJiJin}}</dd>
+        </dl>
+        <div></div>
+        <dl class="zhichu">
+            <dt>社保统筹{{settings.tongChou}}</dt>
+            <dd>{{result.sheBao.tongChou}}</dd>
+        </dl>
+        <div class="hr"></div>
+        <dl>
+            <dt>计税工资</dt>
+            <dd>{{result.jiShui}}</dd>
+        </dl>
+        <div></div>
+        <dl class="zhichu">
+            <dt>个人所得税</dt>
+            <dd>{{result.Shui}}</dd>
+        </dl>
+        <div class="hr"></div>
+        <dl class="result">
+            <dt>实发工资</dt>
+            <dd>{{result.shiFa}}</dd>
+        </dl>
+        <div></div>
+    </section>
+</div>

@@ -1,0 +1,44 @@
+body>div{
+    position: fixed;
+    left: 0;
+    bottom: 200px;
+    width: 100%;
+    cursor: pointer;
+}
+body>div>img{
+    transition: transform 1s;
+}
+.detail{
+    width: 100%;
+    background-color: rgba(0, 0, 0,0.8);
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    position: absolute;
+    top: 0;
+    left:-100%;
+}
+.detail>div:nth-of-type(2){
+    background-image: url('app-code.png');
+    background-repeat: no-repeat;
+    background-position: 0 35px ;
+}
+
+.detail>div:nth-of-type(2)>p{
+    margin-left: 120px;
+    font-size: 25px;
+    color: white;
+}
+.detail>div:nth-of-type(2)>p:nth-of-type(1){
+    margin-top: 50px;
+}
+.detail>div:nth-of-type(2)>p>span{
+    color: orange;
+}
+.detail>div:nth-of-type(3)>span{
+    color: white;
+    margin-top: 30px;
+    font-size: 25px;
+    display: inline-block;
+    transition: transform 1s;
+}

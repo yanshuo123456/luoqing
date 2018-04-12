@@ -1,0 +1,111 @@
+/*p{
+    color: red;
+}
+
+#data{
+    color: blue;
+}
+
+div>p{
+    color: green !important;
+}
+
+.container>p{
+    color: pink;
+}*/
+/*
+选择器的优先级关系：选择越准确，优先级越高;
+id选择器最高;
+其后是class选择器;
+最后是标签选择器;
+
+当属性值后有!important,就取这个值，不再考虑优先级。
+important:重要;
+
+
+常用选择器：
+标签选择器；
+父子选择器(>);
+后代选择器(空格);
+类选择器(.class);
+id选择器(#id);
+逗号选择器(,);
+伪类选择器(:hover;::before;::after;:nth-of-type();:nth-last-of-type());
+通配符选择器(*);
+相邻选择器(+);
+属性选择器([]);
+*/
+
+/*
+div+p:div后面相邻的p
+*/
+/*div+p{
+    background-color: red;
+}*/
+
+/*
+[]:属性选择器*/
+input[type=text]{
+    line-height: 40px;
+}
+
+/*
+未被访问的链接*/
+a:link{
+    color: black;
+}
+/*
+已被访问的链接
+*/
+a:visited{
+    color: red;
+}
+/*活跃状态的链接(鼠标按下)*/
+a:active{
+    color: purple;
+}
+/*鼠标悬浮*/
+a:hover{
+    color: orange;
+}
+
+/*
+获取焦点； focus:焦点
+*/
+input:focus{
+    border: 1px solid green;
+}
+
+/*
+letter:字母；
+首字母
+*/
+/*p:first-letter{
+    color: red;
+    font-size: 40px;
+}*/
+/*#test>p:nth-of-type(3){
+    color: red;
+}*/
+
+/*
+A>B:nth-of-type(n):从A中找第n个B,不是该类型就忽略;
+A>B:nth-child(n):从A中找第n个子标签，是B就选中了;
+*/
+#test>p:nth-child(4){
+    color: red;
+}
+/*
+:first-child; 
+:last-child;
+:nth-child();
+:nth-last-child();
+:only-child();
+*/
+/*
+:firt-of-type();
+:last-of-type();
+:nth-of-type();
+:nth-last-of-type();
+:only-of-type();
+*/

@@ -1,0 +1,95 @@
+<div class="page">
+    <form>
+        <ul class="list">
+            <li>
+                <span>养老费率</span>
+                <input type="number"
+                       [(ngModel)]="settings.yangLao"
+                       (change)="settingChanged()"
+                       zyPercent
+                       name = "yangLao"
+                       step="0.1"
+                       min = "0"
+                       max="100"
+                       placeholder="请输入养老费率">
+                <i>%</i>
+            </li>
+            <li>
+                <span>医疗费率</span>
+                <input type="number"
+                       [(ngModel)]="settings.yiLiao"
+                       (change)="settingChanged()"
+                       zyPercent
+                       name = "yiLiao"
+                       step="0.1"
+                       min = "0"
+                       max="100"
+                       placeholder="请输入医疗费率">
+                <i>%</i>
+            </li>
+            <li>
+                <span>失业费率</span>
+                <input type="number"
+                       [(ngModel)]="settings.shiYe"
+                       (change)="settingChanged()"
+                       zyPercent
+                       name = "shiye"
+                       step="0.1"
+                       min = "0"
+                       max="100"
+                       placeholder="请输入失业费率">
+                <i>%</i>
+            </li>
+            <li>
+                <span>工伤费率</span>
+                <input type="number"
+                       [(ngModel)]="settings.gongShang"
+                       (change)="settingChanged()"
+                       zyPercent
+                       name = "gongShang"
+                       step="0.1"
+                       min = "0"
+                       max="100"
+                       placeholder="请输入工伤费率">
+                <i>%</i>
+            </li>
+            <li>
+                <span>生育费率</span>
+                <input type="number"
+                       [(ngModel)]="settings.shengYu"
+                       (change)="settingChanged()"
+                       zyPercent
+                       name = "shengYu"
+                       step="0.1"
+                       min = "0"
+                       max="100"
+                       placeholder="请输入生育费率">
+                <i>%</i>
+            </li>
+            <li>
+                <span>公积金费率</span>
+                <input type="number"
+                       [(ngModel)]="settings.gongJiJin"
+                       (change)="settingChanged()"
+                       zyPercent
+                       name = "gongJiJin"
+                       step="0.1"
+                       min = "0"
+                       max="100"
+                       placeholder="请输入公积金费率">
+                <i>%</i>
+            </li>
+            <li>
+                <span>社保统筹</span>
+                <input type="number"
+                       [(ngModel)]="settings.tongChou"
+                       (change)="settingChanged()"
+                       name = "tongChou"
+                       step="0.5"
+                       min = "0"
+                       placeholder="请输入社保统筹">
+                <i>元</i>
+            </li>
+        </ul>
+    </form>
+</div>

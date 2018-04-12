@@ -1,0 +1,99 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>html 标签</title>
+    <link rel="stylesheet" href="second.css">
+</head>
+
+<body>
+    <!--
+        小标签
+    -->
+
+    <!--del:delete,删除;-->
+    <del>19.9</del>
+    <s>19.9</s>
+
+    <!--ins:insert，插入-->
+    <ins>增加</ins>
+    <u>增加</u>
+
+    <!--strong:强壮；表示强调-->
+    <strong>强调加粗</strong>
+    <em>强调斜体</em>
+
+    <!--i:italic，斜体-->
+    <i>斜体</i>
+
+    <!--big:大；small:小-->
+    <big>大</big>
+    <small>小</small>
+
+     <!--ul:unordered list 无序列表-->
+    <ul>
+        <li>生活</li>
+        <li>科技</li>
+        <li>财经</li>
+    </ul>
+
+    <!--dl:define list，定义列表-->
+    <dl>
+        <!--dt:define title 定义标题-->
+        <!--dd:define detail 定义详情-->
+        <dt>牛顿第一定律</dt>
+        <dd>任何物体都要保持匀速直线运动或静止状态，直到外力迫使它改变运动状态为止。</dd>
+
+        <dt>牛顿第二定律</dt>
+        <dd>物体加速度的大小跟作用力成正比，跟物体的质量成反比，且与物体质量的倒数成正比；加速度的方向跟作用力的方向相同。</dd>
+    </dl>
+
+    <!--
+        table：表格
+        caption:标题；
+        tr:table row，行；
+        th:table head，表头字段；
+        td:table data cell ,数据格
+        -->
+    <table>
+        <caption>课程表</caption>
+        <tr>
+            <th>周一</th>
+            <th>周二</th>
+            <th>周三</th>
+            <th>周四</th>
+            <th>周五</th>
+            <th>周六</th>
+            <th>周日</th>
+        </tr>
+        <tr>
+            <td>语文</td>
+            <td>数学</td>
+            <td>英语</td>
+            <td>语文</td>
+            <td>数学</td>
+            <!--
+                    合并单元格
+                    rowspan:占据几行-->
+            <td rowspan="2">自习</td>
+            <td rowspan="3">休息</td>
+        </tr>
+        <tr>
+            <td>体育</td>
+            <td>化学</td>
+            <td>地理</td>
+            <td>政治</td>
+            <td>生物</td>
+        </tr>
+        <tr>
+            <!--
+                    colspan:column 列合并
+                -->
+            <td colspan="6">自习</td>
+        </tr>
+    </table>
+
+
+</body>
+
+</html>

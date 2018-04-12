@@ -1,0 +1,28 @@
+p{
+    width: 1000px;
+    margin: 100px auto;
+}
+p>span{
+    margin-right: 30px;
+    font-size: 25px;
+    cursor: pointer;
+}
+div{
+    width: 1000px;
+    margin: 0px auto;
+}
+div>section{
+    height: 300px;
+    font-size: 40px;
+    background-color: red;
+    display: none;
+}
+
+/*初始样式*/
+p>span:nth-of-type(1){
+    color: red;
+}
+div>section:nth-of-type(1){
+    display: block;
+}
+

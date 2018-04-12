@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
+</head>
+<body>
+    <nav>
+        <button onclick="location.href='question.html';">提问</button>
+    </nav>
+    <div id="container"></div>
+    <script id="questions" type="text/html">
+        {{each data item}}
+            <div class="cell">
+                <p>{{item.question}}</p>
+                <p>{{item.date}}</p>
+            </div>
+        {{/each}}
+    </script>
+    <script src="lib/template-web.js"></script>
+    <script src="lib/jquery-3.2.1.js"></script>
+    <script src="lib/jquery.cookie.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

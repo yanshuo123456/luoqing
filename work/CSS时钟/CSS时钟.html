@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="张强">
+        <title>CSS时钟</title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                margin: 0;
+                height: 100%;
+                background-image: url(clock.jpg);
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                background-size: 950px auto;
+            }
+            #dot{
+                width: 30px;
+                height: 30px;
+                background-color: white;
+                border-radius: 50%;
+                position: absolute;
+                top: calc(50% - 30px / 2);
+                left: calc(50% - 30px / 2);
+                z-index: 10;
+            }
+            #second{
+                width: 600px;
+                height: 10px;
+                /*background-color: red;*/
+                border-radius: calc(10px / 2);
+                position: absolute;
+                top: calc(50% - 10px / 2);
+                left: calc(50% - 600px / 2);
+                animation-name: rotate;
+                animation-duration: 60s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                z-index: 9;
+                /*animation-delay: 5s;*/
+                /*animation-delay: -15s;*/
+                /*样式animation-delay设为负值并不能让动画提前开始，但可以改变动画开始时的状态（就好像动画已经开始了一定时间一样）*/
+                /*因为初始状态是在45秒(或45分或9点钟)，所以要移到12点方向需要进行相应偏移*/
+                /*animation-direction: alternate;*/
+            }
+            #second span{
+                width: 350px;
+                height: 3px;
+                background-color: green;
+                display: inline-block;
+                margin-top: 3.5px;
+                border-radius: 1.5px;
+            }
+            #minute{
+                width: 500px;
+                height: 10px;
+                /*background-color: red;*/
+                border-radius: calc(10px / 2);
+                position: absolute;
+                top: calc(50% - 10px / 2);
+                left: calc(50% - 500px / 2);
+                animation-name: rotate;
+                animation-duration: 3600s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                z-index: 8
+            }
+            #minute span{
+                width: 280px;
+                height: 6px;
+                background-color: blue;
+                display: inline-block;
+                margin-top: 1.5px;
+                border-radius: 3px;
+            }
+            #hour{
+                width: 400px;
+                height: 10px;
+                /*background-color: red;*/
+                border-radius: calc(10px / 2);
+                position: absolute;
+                top: calc(50% - 10px / 2);
+                left: calc(50% - 400px / 2);
+                animation-name: rotate;
+                animation-duration: 43200s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+            #hour span{
+                width: 220px;
+                height: 10px;
+                background-color: red;
+                display: inline-block;
+                border-radius: 5px;
+            }
+            @keyframes rotate{
+                from{ transform: rotate(0); }
+                to{ transform: rotate(360deg); }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="dot"></div>
+        <div id="second">
+            <span></span>
+        </div>
+        <div id="minute">
+            <span></span>
+        </div>
+        <div id="hour">
+            <span></span>
+        </div>
+        <script>
+            var time = new Date();
+            
+            var s = time.getSeconds() * -1;
+            var m = time.getMinutes() * -1;
+            var h = time.getHours();
+            
+            h = h > 12 ? h - 12 : h;
+            h = h * -1;
+            
+            h = (h * 60 * 60) - (3 * 60 * 60) + (m * 60) + s
+            m = (m * 60) - (15 * 60) + s;
+            s = s - 15;
+            
+            var second = document.getElementById('second');
+            var minute = document.getElementById('minute');
+            var hour = document.getElementById('hour');
+            
+            second.style.animationDelay = s + 's';
+            minute.style.animationDelay = m + 's';
+            hour.style.animationDelay = h + 's';
+        </script>
+    </body>
+</html>

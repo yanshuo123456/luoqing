@@ -1,0 +1,58 @@
+.cell>div{
+    float: left;
+    padding: 10px 0;
+}
+.cell{
+    overflow: hidden;
+    zoom: 1;
+    width: 380px;
+}
+.cell::after{
+    content: '';
+    clear: both;
+}
+
+.left{
+    text-align: center;
+    width: 5em;
+    background-color: gray;
+}
+.left>p{
+    margin: 5px 0;
+}
+
+.right{
+    width: 300px;
+    background-color: lightgray;
+    background-position: right bottom;
+    background-size:  auto 100%;
+    background-repeat: no-repeat;
+    display: none;
+}
+.right>p{
+    margin: 7px 10px;
+}
+.right>p:nth-of-type(1){
+    font-size: 20px;
+}
+.right>p:nth-of-type(2){
+    font-size: 15px;
+}
+.cell:nth-of-type(1)>.right{
+      background-image: url('images/1.jpg');
+}
+.cell:nth-of-type(2)>.right{
+      background-image: url('images/2.jpg');
+}
+.cell:nth-of-type(3)>.right{
+      background-image: url('images/3.jpg');
+}
+.cell:nth-of-type(4)>.right{
+      background-image: url('images/4.jpg');
+}
+.cell:nth-of-type(5)>.right{
+      background-image: url('images/5.jpg');
+}
+.cell:nth-of-type(6)>.right{
+      background-image: url('images/12.png');
+}

@@ -1,0 +1,25 @@
+address{
+    /*字体风格：
+    normal:正常；
+    italic:斜体*/
+    font-style: italic;
+}
+
+ul{
+    list-style: upper-alpha;
+}
+
+/*
+,:逗号(多项)选择器;
+*/
+table,caption,tr,td,th{
+    border: 1px solid black;
+    /*space:空间，距离; 边框与边框间的距离*/
+    border-spacing: 0;
+    /*collapse:倒塌，崩溃; 边框是否合并*/
+    border-collapse: collapse;
+}
+th,td{
+    padding: 15px;
+    text-align: center;
+}

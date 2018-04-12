@@ -1,0 +1,42 @@
+<!--视图模板art-template-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container"></div>
+    
+    <script id="video" type="text/html">
+        {{if error== 1}}
+            <h1>获取数据失败，请检查网络连接后，下次尝试</h1>
+        {{else}}
+            {{each data item index}}
+                <div class="cell">
+                    <img src="{{item.room_src}}" alt="">
+                    <p>
+                        <span>{{item.nickname}}</span>
+                        <!--
+                            过滤器filter
+                            原数据 | 过滤器名称 过滤器参数
+                            |:管道操作符；
+                            过滤器默认有一个参数，就是|前面的原数据,
+                            也可以添加额外参数;
+                        -->
+                        <span>{{'20171012' | dateFormat}}</span>
+                        <span>{{item.online | numFix 3}}</span>
+                        <!--<span>{{item.online>10000?((item.online/10000).toFixed(2)+'万'):item.online}}</span>-->
+                    </p>
+                </div>
+            {{/each}}
+        {{/if}}
+    </script>
+    <script src="jquery-3.2.1.js"></script>
+    <script src="template-web.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

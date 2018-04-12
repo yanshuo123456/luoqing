@@ -1,0 +1,12 @@
+<header>{{tabItems[tabIndex]['title']}}</header>
+<zy-calc [zyShow]="tabIndex==0"></zy-calc>
+<zy-setup [zyShow]="tabIndex==1" (change)="settingChange()"></zy-setup>
+<zy-about [zyShow]="tabIndex==2"></zy-about>
+<footer>
+  <a *ngFor="let tabItem of tabItems;let i = index"
+    [class.selected]="tabIndex == i"
+    (click)="tabIndex = i" href="javascript:;">
+    <span><i [class]="tabItem.icon"></i></span>
+    <span>{{tabItem.title}}</span>
+  </a>
+</footer>

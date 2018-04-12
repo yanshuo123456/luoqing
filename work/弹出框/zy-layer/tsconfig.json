@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "module": "amd",
+        "target": "es3",
+        "sourceMap": true,
+        "allowJs": true,
+        "outFile": "js/index.js"
+    },
+    "include": [
+        "*.ts"
+    ]
+}

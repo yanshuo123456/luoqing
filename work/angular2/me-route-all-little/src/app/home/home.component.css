@@ -1,0 +1,64 @@
+.one{
+    background-color: #3299FF;
+    width: 100%;
+    line-height: 2;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+.div>input{
+    width: 90%;
+    margin: 0 5%;
+    border-radius: 5px;
+    border:1px solid #3299FF;
+    line-height: 2;
+}
+.ons{
+    background-color: #3299FF;
+    font-size: 15px;
+    color: white;
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: #3299FF;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer>P{
+    display: inline-block;
+    color: white;
+}
+
+.section p{
+    display: flex;
+    justify-content: space-between;
+    color:red;
+}
+.section p>span>input{
+    width:40px;
+}
+
+.section{
+    width:90%;
+    margin:5%;
+}
+.sees{
+    display: flex;
+    justify-content: space-between;
+}
+.only>p{
+    display: flex;
+    justify-content: space-between;
+}
+.kk{
+    background-color: #3299FF;
+    width: 100%;
+    line-height: 2;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}

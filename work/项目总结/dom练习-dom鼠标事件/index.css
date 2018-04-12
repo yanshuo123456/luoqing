@@ -1,0 +1,12 @@
+#container>div>p>span:nth-of-type(1)::before{
+    content: '￥';
+    font-size: 17px;
+}
+#container{
+    overflow: hidden;
+    zoom: 1;
+}
+#container::after{
+    content: '';
+    clear: both;
+}

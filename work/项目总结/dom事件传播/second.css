@@ -1,0 +1,15 @@
+body>div{
+    width: 800px;
+    height: 800px;
+    background-color: red;
+}
+body>div>div{
+    width: 600px;
+    height: 600px;
+    background-color: blue;
+}
+body>div>div>div{
+    width: 400px;
+    height: 400px;
+    background-color: green;
+}

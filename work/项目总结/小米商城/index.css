@@ -1,0 +1,22 @@
+div{
+    /*
+    vw:显示屏可见区域宽的百分比;
+    vh:显示屏可见区域高的百分比
+    */
+
+    width: 20vw;
+    height:20vh;
+    background-color: red;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+nav{
+    font-size: 1.5rem;
+    width: 100%;
+    white-space: nowrap;
+    /*溢出:滚动*/
+    overflow: scroll;
+}

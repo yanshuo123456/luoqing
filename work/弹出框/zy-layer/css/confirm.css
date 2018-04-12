@@ -1,0 +1,25 @@
+.modal-separator{
+	border-left: 1px solid silver;
+	height: 50px;
+	position: absolute;
+	bottom: 0;
+	left: calc(50%);
+	display: block;
+}
+.modal-left-button, .modal-right-button{
+	display: block;
+	width: 49%;
+	height: 48px;
+	/*background-color: red;*/
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-radius: 10px;
+	text-align: center;
+	line-height: 50px;
+	cursor: pointer;
+}
+.modal-right-button{
+	left: auto;
+	right: 0;
+}

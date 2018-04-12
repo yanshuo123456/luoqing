@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>仿通讯录数组过滤展示</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <input type="text" placeholder="请输入搜索内容">
+    <div class="contact"></div>
+    <script id="contact" type="text/html">
+        {{each data item}}
+            <div class="cell">
+                <span>{{item.name}}</span>
+                <span>{{item.phone}}</span>
+            </div>
+        {{/each}}
+    </script>
+    <script src="jquery-3.2.1.js"></script>
+    <script src="template-web.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>
